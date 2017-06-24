@@ -10,7 +10,7 @@ $ sudo pip install Fuzzy
 
 **Name-Gender Dictionaries**
 
-The dictionaries can be found on [downloads page] (https://github.com/KartikTalwar/LeGenderary/downloads)
+The dictionaries can be found on [downloads page](https://github.com/KartikTalwar/LeGenderary/downloads)
 
 ## Methods
 
@@ -32,7 +32,7 @@ is initialized.
 | **dict1**         | Path to first dictionary file *(dict1.txt or /home/user/docs/dict1.txt)*    |
 | **dict2**         | Path to first dictionary file *(dict2.txt or /home/user/docs/dict2.txt)*    |
 | **customDict**    | Path to custom dictionary file *(custom.txt or /home/user/docs/custom.txt)* |
-| **bingAPIKey**    | Your Bing/Azure marketplace API Key. Register [here] (http://bit.ly/JmuoZW) |
+| **bingAPIKey**    | Your Bing/Azure marketplace API Key. Register [here](http://bit.ly/JmuoZW) |
 
 
 ### Hierarchy
@@ -140,7 +140,7 @@ ______________________________________________________________
 
        - **determineFromBing(fullName)**
 
-            Uses [Bing API] (https://datamarket.azure.com/dataset/5BA839F1-12CE-4CCE-BF57-A49D98D29A44) to predict 
+            Uses [Bing API](https://datamarket.azure.com/dataset/5BA839F1-12CE-4CCE-BF57-A49D98D29A44) to predict 
             the gender by scanning the content excerpts from the first page results. Each method call uses 4 queries
             to determine the gender but the final gender is saved in the custom dictionary.
 
@@ -151,7 +151,7 @@ ______________________________________________________________
 
        - **determineFromGPeters(firstName)**
 
-            Queries [gpeters.com] (http://www.gpeters.com/names/baby-names.php) and returns the gender based on commonality
+            Queries [gpeters.com](http://www.gpeters.com/names/baby-names.php) and returns the gender based on commonality
 
             ```python
             firstName = 'Richard'
@@ -216,7 +216,7 @@ print firstName, getgender                               # Richard, male
 
 ## Authors
 
-- [Kartik Talwar] (http://kartikt.com)
+- [Kartik Talwar](http://kartikt.com)
 
 
 ## Legal Stuff
