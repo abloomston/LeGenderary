@@ -21,18 +21,18 @@ ______________________________________________________________
 This are the keys and values associated with the dictionary you need to provide when the class 
 is initialized.
 
-|        Key        |                                   Values                                    |
-|:-----------------:|:---------------------------------------------------------------------------:|
-| **male**          | Output you'd like for male gender *(male, 0, man etc)*                      |
-| **female**        | Output you'd like for female gender *(female, 1, women etc)*                |
-| **androgynous**   | Output you'd like for androgynous name *(andro, 2 etc)*                     |
-| **unknown**       | Output you'd like for indeterminant gender *(unknown, -1 etc)*              |
-| **maleConfirm**   | Output you'd like for male where the gender confidence is low               |
-| **femaleConfirm** | Output you'd like for female where the gender confidence is low             |
-| **dict1**         | Path to first dictionary file *(dict1.txt or /home/user/docs/dict1.txt)*    |
-| **dict2**         | Path to first dictionary file *(dict2.txt or /home/user/docs/dict2.txt)*    |
-| **customDict**    | Path to custom dictionary file *(custom.txt or /home/user/docs/custom.txt)* |
-| **bingAPIKey**    | Your Bing/Azure marketplace API Key. Register [here](http://bit.ly/JmuoZW) |
+|        Key        |                                   Values                                             |
+|:-----------------:|:------------------------------------------------------------------------------------:|
+| **male**          | Output you'd like for male gender *(male, 0, man etc)*                               |
+| **female**        | Output you'd like for female gender *(female, 1, women etc)*                         |
+| **androgynous**   | Output you'd like for androgynous name *(andro, 2 etc)*                              |
+| **unknown**       | Output you'd like for indeterminant gender *(unknown, -1 etc)*                       |
+| **maleConfirm**   | Output you'd like for male where the gender confidence is low                        |
+| **femaleConfirm** | Output you'd like for female where the gender confidence is low                      |
+| **dict1**         | Path to first dictionary file *(dict1.txt or /home/user/docs/dict1.txt)*             |
+| **dict2**         | Optional path to first dictionary file *(dict2.txt or /home/user/docs/dict2.txt)*    |
+| **customDict**    | Optional path to custom dictionary file *(custom.txt or /home/user/docs/custom.txt)* |
+| **bingAPIKey**    | Your Bing/Azure marketplace API Key. Register [here](http://bit.ly/JmuoZW)           |
 
 
 ### Hierarchy
