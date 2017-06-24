@@ -31,8 +31,8 @@ class leGenderary:
     def __init__(self, options):
         self.options    = options
         self.firstDict  = self.parseFirstDataSet(options['dict1'])
-        self.secondDict = self.parseSecondDataSet(options['dict2'])
-        self.customDict = self.parseSecondDataSet(options['customDict'])
+        self.secondDict = self.parseSecondDataSet(options.get('dict2'))
+        self.customDict = self.parseSecondDataSet(options.get('customDict'))
 
 
     def determineFirstName(self, nameArray):
@@ -289,16 +289,16 @@ class leGenderary:
 
         phonetics  = self.determineFromPhonetic(firstName)
         if phonetics in definite:
-            self._addToDictionary(firstName, phonetics, self.options['customDict'])
+            self._addToDictionary(firstName, phonetics, self.options.get('customDict'))
             return phonetics
 
         usetheweb  = self.determineFromInternet(fullName)
         if usetheweb in definite:
             if usetheweb == self.options['male']:
-                self._addToDictionary(firstName, self.options['maleConfirm'], self.options['customDict'])
+                self._addToDictionary(firstName, self.options['maleConfirm'], self.options.get('customDict'))
                 return self.options['maleConfirm']
             if usetheweb == self.options['female']:
-                self._addToDictionary(firstName, self.options['femaleConfirm'], self.options['customDict'])
+                self._addToDictionary(firstName, self.options['femaleConfirm'], self.options.get('customDict'))
                 return self.options['femaleConfirm']
 
         if not required:
@@ -350,24 +350,26 @@ class leGenderary:
 
     def parseSecondDataSet(self, fileName):
         names = {}
-        f     = codecs.open(fileName, 'r', encoding='iso8859-1').read()
-        f     = set(f.split("\n"))
 
-        for person in f:
-            try:
-                separate = person.split(',')
-                name     = separate[0].lower()
+        if fileName is not None:
+            f     = codecs.open(fileName, 'r', encoding='iso8859-1').read()
+            f     = set(f.split("\n"))
 
-                if int(separate[1]) == 0:
-                    gender  = self.options['male']
-                elif int(separate[1]) == 1:
-                    gender  = self.options['female']
-                else:
-                    gender  = self.options['androgynous']
+            for person in f:
+                try:
+                    separate = person.split(',')
+                    name     = separate[0].lower()
 
-                names[name] = gender
-            except:
-                pass
+                    if int(separate[1]) == 0:
+                        gender  = self.options['male']
+                    elif int(separate[1]) == 1:
+                        gender  = self.options['female']
+                    else:
+                        gender  = self.options['androgynous']
+
+                    names[name] = gender
+                except:
+                    pass
 
         return names
 
@@ -489,6 +491,8 @@ class leGenderary:
 
 
     def _addToDictionary(self, name, gender, customDict):
+        if not customDict:
+            return
         if gender == self.options['male']:
             gender = '0'
         if gender == self.options['female']:
